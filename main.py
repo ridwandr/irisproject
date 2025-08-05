@@ -11,7 +11,7 @@ st.set_page_config(
 )
 
 # load model
-model = joblib.load('iris_model.joblib')
+model = joblib.load('model.joblib')
 
 # get prediction function
 def get_prediction(data:pd.DataFrame, model):
@@ -66,3 +66,4 @@ if predict:  # jika menekan button predict maka akan menampilkan input dalam ben
     prob = result["prob"][0][prediction]
     
     st.write(f"Your Iris Species is: **{prob:.0%} {label}**")
+
